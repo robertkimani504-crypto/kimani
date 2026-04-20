@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>programmes-Estel Children`s Centre</title>
+    <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* HEADER */
+.page-header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://picsum.photos/1600/400') center/cover no-repeat;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* PROGRAM CARDS */
+.programs {
+    padding: 50px 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+/* BUTTON */
+.btn-custom {
+    background: #0d6efd;
+    color: white;
+}
+
+.btn-custom:hover {
+    background: #0b5ed7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 28px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar bg-primary" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar" style="background-color: #e3f2fd;" data-bs-theme="light">
+  <!-- Navbar content -->
+</nav>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="get_involve.html">Get_involved</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+      
+        <form class="d-flex" onsubmit="return searchPage()">
+  <input 
+    class="form-control me-2" 
+    type="search" 
+    placeholder="Search pages..." 
+    id="searchInput">
+    
+  <button class="btn btn-outline-success" type="submit">
+    Search
+  </button>
+</form>
+    </div>
+  </div>
+</nav> 
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <h1>Our Programs</h1>
+    <p>Discover the initiatives that are transforming lives in our community</p>
+</div>
+
+<!-- PROGRAMS SECTION -->
+<section class="programs container">
+    <div class="row g-4">
+
+        <!-- Program 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/estel 3.jpg" class="img-fluid">
+                <div class="card-body">
+                    <h5>Education Support</h5>
+                    <p>Providing school supplies, mentorship, and access to quality education for children in need.</p>
+                    <br><br>
+                  <p>
+                    Our Education Support program is committed to ensuring that every child has access to quality learning opportunities regardless of their background. We provide school supplies, tuition assistance, and mentorship to help students stay in school and perform well academically, building a strong foundation for their future success and personal development.
+<br><br>
+
+We work closely with teachers, parents, and community leaders to identify students who need support. Through partnerships and outreach, we ensure that resources reach the most vulnerable children. Our goal is to reduce school dropout rates and encourage a culture of learning, discipline, and continuous academic improvement among young learners.
+<br><br>
+
+Beyond academics, we focus on holistic development by offering guidance, counseling, and life skills training. Students are encouraged to dream big and work hard toward achieving their goals. By investing in education, we empower children to break the cycle of poverty and contribute positively to their communities.
+                </p>    
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/estel 21.jpg" class="img-fluid">
+                <div class="card-body">
+                    <h5>Talent Development</h5>
+                    <p>Helping young people discover and grow their talents in sports, music, and technology.</p>
+                    <br><br>
+                    <p>
+Our Talent Development program provides a platform for young individuals to discover, nurture, and showcase their unique abilities. Whether in sports, music, art, or technology, we create opportunities for participants to grow their skills and gain confidence while expressing themselves creatively in a supportive and encouraging environment.
+
+<br><br>
+We organize training sessions, competitions, and exhibitions that allow participants to improve and gain exposure. Skilled mentors guide them through their journey, helping them refine their talents and understand how to turn their passions into meaningful opportunities that can positively impact their lives and future careers.
+
+<br><br>
+By promoting creativity and innovation, we aim to unlock potential and inspire excellence among youth. This program not only builds confidence but also fosters discipline, teamwork, and resilience. We believe that nurturing talent can open doors to new opportunities and create pathways toward success and self-reliance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/WhatsApp Image 2026-04-06 at 11.37.20.jpeg" class="img-fluid">
+                <div class="card-body">
+                    <h5>Community Outreach</h5>
+                    <p>Engaging communities through events, support programs, and impactful initiatives.</p>
+                    <br><br>
+                    <p>
+Our Community Outreach program focuses on connecting with people and addressing real challenges within the community. Through organized events, support initiatives, and partnerships, we aim to uplift vulnerable groups and create a sense of unity, compassion, and shared responsibility among all members of society.
+
+<br><br>
+We actively engage in activities such as clean-up drives, awareness campaigns, and support programs for families in need. These initiatives are designed to bring people together and encourage collective action toward improving living conditions and promoting sustainable development within the community.
+
+<br><br>
+By working hand in hand with community members, we ensure that our efforts are impactful and relevant. Our goal is to empower individuals, strengthen relationships, and build a supportive environment where everyone has the opportunity to thrive and contribute to positive change.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/estel 16.jpg" class="img-fluid">
+                <div class="card-body">
+                    <h5>Health & Wellness</h5>
+                    <p>Promoting healthy living through medical camps, awareness, and support services.</p>
+                    <br><br>
+                    <p>
+The Health and Wellness program is dedicated to promoting healthy lifestyles and improving access to basic healthcare services. We organize medical camps, health education sessions, and wellness activities that help individuals understand the importance of maintaining good physical and mental health.
+
+<br><br>
+Our team collaborates with healthcare professionals to provide screenings, consultations, and preventive care services. We focus on raising awareness about common health issues and encouraging early intervention to reduce risks and improve overall well-being within the community.
+
+<br><br>
+We believe that good health is essential for a productive and fulfilling life. By empowering individuals with knowledge and access to care, we aim to build a healthier community where people can live actively, confidently, and free from preventable health challenges.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 5 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/estel 11.jpg" class="img-fluid">
+                <div class="card-body">
+                    <h5>Feeding Program</h5>
+                    <p>Providing nutritious meals to vulnerable children and families in the community.</p>
+                    <br><br>
+                    <p>
+Our Feeding Program ensures that vulnerable children and families have access to nutritious meals on a regular basis. We understand that hunger affects learning, health, and overall well-being, and we are committed to providing consistent food support to those who need it most.
+
+<br><br>
+Through partnerships and donations, we distribute meals and food supplies to communities facing food insecurity. Our program focuses on delivering balanced nutrition that supports growth, energy, and improved health outcomes, especially among children and the elderly.
+
+<br><br>
+By addressing hunger, we create a foundation for better education, health, and productivity. We believe that no one should go to bed hungry, and through this initiative, we strive to bring hope, dignity, and stability to families in need.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Program 6 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/estel 6.jpg" class="img-fluid">
+                <div class="card-body">
+                    <h5>Youth Empowerment</h5>
+                    <p>Equipping young people with skills, training, and opportunities for a better future.</p>
+                    <br><br>
+                    <p>
+The Youth Empowerment program equips young people with the skills, knowledge, and opportunities needed to succeed in life. We provide training in leadership, entrepreneurship, and personal development to help youth build confidence and take charge of their future.
+
+<br><br>
+We organize workshops, mentorship sessions, and skill-building activities that prepare youth for employment and self-reliance. By focusing on practical skills and real-world experiences, we ensure that participants are ready to face challenges and seize opportunities in today’s dynamic environment.
+
+<br><br>
+Our goal is to inspire and empower young individuals to become responsible leaders and change-makers in their communities. By investing in youth, we contribute to a brighter future where innovation, resilience, and determination drive progress and positive transformation.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<div id="programmes"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+<script src="js/firebase.js"></script>
+
+<script>
+const db = firebase.firestore();
+
+db.collection("programmes").get().then(snapshot => {
+  snapshot.forEach(doc => {
+    let data = doc.data();
+
+    document.getElementById("programmes").innerHTML += `
+      <div class="card">
+        <h3>${data.title}</h3>
+        <p>${data.description}</p>
+      </div>
+    `;
+  });
+});
+</script>
+
+<script>
+function searchPage() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+
+  if (input.includes("about")) {
+    window.location.href = "about.html";
+  } 
+  else if (input.includes("program") || input.includes("services")) {
+    window.location.href = "programmes.html";
+  } 
+  else if (input.includes("gallery") || input.includes("photos")) {
+    window.location.href = "gallery.html";
+  } 
+  else if (input.includes("contact")) {
+    window.location.href = "contact.html";
+  } 
+  else if (input.includes("home")) {
+    window.location.href = "index.html";
+  } 
+  else if (input.includes("talents")) {
+    window.location.href = "talents.html";
+  } 
+  else {
+    alert("Page not found. Try: About, Programmes, Gallery, Contact");
+  }
+
+   if (input.includes("donate")) {
+  window.location.href = "getinvolved.html";
+}
+
+  return false; // stop reload
+}
+</script>
+<footer class="bg-dark text-white text-center p-3">
+  <p>&copy; 2026 Estel Children's Home</p>
+</footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

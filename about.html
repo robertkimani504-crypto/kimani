@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>About Us-Estel Children`s Centre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body,html{
+  margin:0;
+  height:100%;
+  font-family:Arial;
+}
+
+/* BACKGROUND SLIDESHOW */
+.bg-slideshow{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-2;
+}
+
+.bg-slideshow img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  animation:fade 24s infinite;
+}
+
+.bg-slideshow img:nth-child(1){animation-delay:0s;}
+.bg-slideshow img:nth-child(2){animation-delay:6s;}
+.bg-slideshow img:nth-child(3){animation-delay:12s;}
+.bg-slideshow img:nth-child(4){animation-delay:18s;}
+
+@keyframes fade{
+  0%{opacity:0;}
+  10%{opacity:1;}
+  30%{opacity:1;}
+  40%{opacity:0;}
+  100%{opacity:0;}
+}
+
+/* OVERLAY */
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+  z-index:-1;
+}
+
+/* HEADER */
+.hero{
+  text-align:center;
+  color:white;
+  padding:70px 20px 20px;
+}
+
+/* CARDS */
+.about-card{
+  background:rgba(255,255,255,0.95);
+  border-radius:15px;
+  padding:25px;
+  margin-bottom:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.about-card:hover{
+  transform:translateY(-5px);
+}
+
+/* TITLE */
+.about-card h3{
+  color:#0d6efd;
+  margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar bg-primary" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar" style="background-color: #e3f2fd;" data-bs-theme="light">
+  <!-- Navbar content -->
+</nav>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="get_involve.html">Get_involved</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="programmes.html">programmes</a>
+        </li>
+        
+        <form class="d-flex" onsubmit="return searchPage()">
+  <input 
+    class="form-control me-2" 
+    type="search" 
+    placeholder="Search pages..." 
+    id="searchInput">
+    
+  <button class="btn btn-outline-success" type="submit">
+    Search
+  </button>
+</form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!-- BACKGROUND -->
+<div class="bg-slideshow">
+  <img src="images/estel 12.jpg">
+  <img src="images/estel 25.jfif">
+  <img src="images/estel 18.jpg">
+  <img src="images/estel 4.jpg">
+</div>
+
+<div class="overlay"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>About Us</h1>
+  <p>Estel Children’s Centre - Changing lives through care and hope</p>
+</div>
+
+<div class="container">
+
+<div class="row">
+
+<!-- HOW WE BEGAN -->
+<div class="col-md-6">
+  <div class="about-card">
+    <h3>How We Began</h3>
+    <p>
+      Estel Children’s Centre was founded in 2007 with a humble beginning of just one child. With time, the family grew from one to two, and today, we are proud to care for 66 children. The centre was established by Esther Wambui Waweru, a devoted Christian whose compassion and strong faith inspired her to reach out and support the less fortunate in society. Located in Kayole, Nairobi, Kenya, Estel Children’s Centre continues to be a place of love, care, and hope, where every child is nurtured and given a chance for a brighter future.
+    </p>
+  </div>
+</div>
+
+<!-- OUR MISSION -->
+<div class="col-md-6">
+  <div class="about-card">
+    <h3>Our Mission</h3>
+    <p>
+     At Estel Children’s Centre, our mission is to provide a safe, loving, and supportive home for vulnerable children. We are committed to nurturing their physical, emotional, and spiritual growth by offering quality care, education, and guidance. Through compassion and faith, we strive to empower every child to reach their full potential and become responsible, confident, and hope-filled members of society.
+    </p>
+  </div>
+</div>
+
+<!-- OUR VISION -->
+<div class="col-md-6">
+  <div class="about-card">
+    <h3>Our Vision</h3>
+    <p>
+     To create a nurturing and empowering environment where every child is given the opportunity to grow, learn, and thrive, becoming a confident, responsible, and self-reliant individual who contributes positively to society.
+    </p>
+  </div>
+</div>
+
+<!-- OUR CHALLENGES -->
+<div class="col-md-6">
+  <div class="about-card">
+    <h3>Our Challenges</h3>
+    
+    <section class="container my-5">
+  <h2 class="text-center mb-4">Our Challenges</h2>
+  <p class="text-center mb-5">
+    Despite our commitment to supporting every child, we face several ongoing challenges.
+    We rely entirely on well-wishers, as we currently have no sponsors or permanent donors.
+  </p>
+  
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <h5>Food Insecurity</h5>
+      <p>
+        Providing daily nutritious meals remains a major challenge. Many children depend on us
+        for their only reliable meal of the day.
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <h5>Rent & Accommodation</h5>
+      <p>
+        We struggle to consistently pay rent for our facilities, which are essential for
+        providing a safe and stable environment for the children.
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <h5>Staff Salaries</h5>
+      <p>
+        Our dedicated staff work tirelessly, but we often face difficulties in paying their
+        salaries on time due to limited financial resources.
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <h5>School Fees</h5>
+      <p>
+        Every child under our care attends a private school to ensure quality education.
+        However, meeting school fee requirements is a continuous challenge.
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <h5>Medical Care</h5>
+      <p>
+        Covering hospital bills and ensuring proper healthcare for the children is difficult,
+        especially during emergencies.
+      </p>
+    </div>
+
+    <div class="col-md-4">
+      <h5>Lack of Sponsors</h5>
+      <p>
+        We currently have no постоян sponsors or donors. Our work depends entirely on
+        kind-hearted well-wishers who offer support whenever they can.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-5">
+    <p>
+      Your support can make a lasting difference in the lives of these children.
+    </p>
+    
+  </div>
+</section>
+    
+
+    
+  </div>
+</div>
+
+</div>
+</div>
+
+<script>
+function searchPage() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+
+  if (input.includes("about")) {
+    window.location.href = "about.html";
+  } 
+  else if (input.includes("program") || input.includes("services")) {
+    window.location.href = "programmes.html";
+  } 
+  else if (input.includes("gallery") || input.includes("photos")) {
+    window.location.href = "gallery.html";
+  } 
+  else if (input.includes("contact")) {
+    window.location.href = "contact.html";
+  } 
+  else if (input.includes("home")) {
+    window.location.href = "index.html";
+  } 
+  else if (input.includes("talents")) {
+    window.location.href = "talents.html";
+  } 
+  else {
+    alert("Page not found. Try: About, Programmes, Gallery, Contact");
+  }
+   if (input.includes("donate")) {
+  window.location.href = "getinvolved.html";
+}
+
+  return false; // stop reload
+}
+</script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

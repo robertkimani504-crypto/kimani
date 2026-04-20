@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Get_involved- Estel Children`s Centre</title>
+    <!-- EmailJS (for sending form emails) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+body,html{
+  margin:0;
+  height:100%;
+  font-family:Arial;
+  scroll-behavior:smooth;
+}
+
+/* BACKGROUND */
+.bg-slideshow{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-2;
+}
+
+.bg-slideshow img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  animation:fade 24s infinite;
+}
+
+.bg-slideshow img:nth-child(1){animation-delay:0s;}
+.bg-slideshow img:nth-child(2){animation-delay:6s;}
+.bg-slideshow img:nth-child(3){animation-delay:12s;}
+.bg-slideshow img:nth-child(4){animation-delay:18s;}
+
+@keyframes fade{
+  0%{opacity:0;}
+  10%{opacity:1;}
+  30%{opacity:1;}
+  40%{opacity:0;}
+  100%{opacity:0;}
+}
+
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+  z-index:-1;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  color: rgba(255, 255, 255, 0.842);
+  padding:70px 20px 20px;
+}
+
+/* CARDS */
+.card-box{
+  background:whitesmoke;
+  border-radius:15px;
+  padding:25px;
+  text-align:center;
+  transition:0.3s;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-box:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+.section{
+  background: rgba(255,255,255,0.95);
+  padding:30px;
+  border-radius:15px;
+  margin-top:30px;
+}
+
+/* COUNTERS */
+.counter{
+  font-size:30px;
+  font-weight:bold;
+  color:#0d6efd;
+}
+
+/* BUTTON */
+.btn-custom{
+  width:100%;
+  margin-top:10px;
+}
+
+/* SUCCESS */
+#successMsg{
+  display:whitesmoke;
+  color:green;
+  margin-top:10px;
+  text-align:center;
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar bg-primary" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar" style="background-color: #e3f2fd;" data-bs-theme="light">
+  <!-- Navbar content -->
+</nav>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="programmes.html">programmes</a>
+        </li>
+        
+        <form class="d-flex" onsubmit="return searchPage()">
+  <input 
+    class="form-control me-2" 
+    type="search" 
+    placeholder="Search pages..." 
+    id="searchInput">
+    
+  <button class="btn btn-outline-success" type="submit">
+    Search
+  </button>
+</form>
+    </div>
+  </div>
+</nav> 
+
+<!-- BACKGROUND -->
+<div class="bg-slideshow">
+  <img src="images/estel 12.jpg">
+  <img src="images/estel 25.jfif">
+  <img src="images/estel 18.jpg">
+  <img src="images/estel 4.jpg">
+</div>
+
+<div class="overlay"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Get Involved</h1>
+  <p>Change lives by donating, volunteering, and supporting our mission</p>
+</div>
+
+<!-- COUNTERS -->
+<div class="container text-center text-white">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="counter" id="donations">0</div>
+      <p>Donations Received</p>
+    </div>
+    <div class="col-md-4">
+      <div class="counter" id="volunteers">0</div>
+      <p>Volunteers</p>
+    </div>
+    <div class="col-md-4">
+      <div class="counter" id="children">0</div>
+      <p>Children Supported</p>
+    </div>
+  </div>
+</div>
+
+<!-- ACTION CARDS -->
+<div class="container mt-4">
+<div class="row text-center">
+
+  <div class="col-md-4">
+    <div class="card-box" onclick="scrollToSection('mpesa')">
+      <i class="fas fa-mobile-alt fa-2x"></i>
+      <h4>M-Pesa</h4>
+      <p>Instant mobile donation</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card-box" onclick="scrollToSection('bank')">
+      <i class="fas fa-university fa-2x"></i>
+      <h4>Bank</h4>
+      <p>Direct bank transfer</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card-box" onclick="scrollToSection('volunteer')">
+      <i class="fas fa-hands-helping fa-2x"></i>
+      <h4>Volunteer</h4>
+      <p>Join our mission</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- M-PESA -->
+<div id="mpesa" class="section">
+  <h3>M-Pesa Donation</h3>
+  <p><b>Till:</b>5030731 </p>
+  
+</div>
+
+<!-- BANK -->
+<div id="bank" class="section">
+  <h3>Bank Details</h3>
+  <p><b>Bank:</b> EQUITY</p>
+  <p><b>Account:</b> 0650193241408</p>
+  <p><b>Name:</b> ESTEL CHILDREN`S CENTRE</p>
+  <button onclick="copyBank()">Copy Bank Details</button>
+</div>
+
+
+<!-- VOLUNTEER FORM -->
+<div id="volunteer" class="section">
+  <h3>Volunteer Application</h3>
+
+  <form id="volunteerForm">
+    <input type="text" name="name" class="form-control mb-2" placeholder="Full Name" required>
+    <input type="email" name="email" class="form-control mb-2" placeholder="Email" required>
+    <input type="tel" name="phone" class="form-control mb-2" placeholder="Phone">
+    <textarea name="message" class="form-control mb-2" rows="4" placeholder="Why do you want to volunteer?" required></textarea>
+
+    <button type="submit" class="btn btn-primary btn-custom">Submit</button>
+    <div id="successMsg">✅ Application sent successfully!</div>
+  </form>
+</div>
+
+</div>
+<div>
+<a href="https://wa.me/254722727949?text=Hello%20Estel%20Centre%20I%20want%20to%20support%20you" target="_blank">
+Message us on WhatsApp
+</a>
+</div>
+<script>
+const express = require("express");
+const axios = require("axios");
+const app = express();
+
+app.use(express.json());
+
+app.post("/stkpush", async (req, res) => {
+  const phone = req.body.phone;
+  const amount = req.body.amount;
+
+  const url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest";
+
+  const token = "YOUR_ACCESS_TOKEN";
+
+  const data = {
+    BusinessShortCode: "174379",
+    Password: "YOUR_PASSWORD",
+    Timestamp: "YOUR_TIMESTAMP",
+    TransactionType: "CustomerPayBillOnline",
+    Amount: amount,
+    PartyA: phone,
+    PartyB: "174379",
+    PhoneNumber: phone,
+    CallBackURL: "https://yourdomain.com/callback",
+    AccountReference: "ESTEL",
+    TransactionDesc: "Donation"
+  };
+
+  const response = await axios.post(url, data, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+
+  res.send(response.data);
+});
+
+app.listen(3000);
+
+emailjs.send("service", "template_user", data);
+emailjs.send("service", "template_admin", data);
+</script>
+
+<!-- SCRIPT -->
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+/* COUNTER ANIMATION */
+function animate(id, target){
+  let count = 0;
+  let el = document.getElementById(id);
+  let interval = setInterval(()=>{
+    count++;
+    el.innerText = count;
+    if(count >= target) clearInterval(interval);
+  }, 20);
+}
+
+
+
+/* EMAILJS */
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+document.getElementById("volunteerForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "YOUR_SERVICE_ID",
+    "YOUR_TEMPLATE_ID",
+    this
+  ).then(()=>{
+    document.getElementById("successMsg").style.display = "block";
+    this.reset();
+  }).catch(()=>{
+    alert("Failed to send application");
+  });
+});
+</script>
+<script>
+function copyBank(){
+  const text = `
+Bank: EQUITY
+Account Name: ESTEL CHILDRENS CENTRE
+Account Number: 0650193241408
+Branch: KAYOLE
+  `;
+
+  navigator.clipboard.writeText(text)
+    .then(() => alert("Bank details copied!"))
+    .catch(() => alert("Failed to copy"));
+}
+function copyTill(){
+  const text = `
+Till: m-pesa
+
+Account Number: 5030137
+
+  `;
+
+  navigator.clipboard.writeText(text)
+    .then(() => alert("Till number copied!"))
+    .catch(() => alert("Failed to copy"));
+}
+</script>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

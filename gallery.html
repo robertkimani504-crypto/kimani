@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Gallery Children`s Centre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://picsum.photos/1600/500') center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* GRID 5 COLUMNS */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 1200px) {
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* BUTTONS */
+.controls {
+    margin-top: 15px;
+}
+
+.controls button {
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: #ddd;
+}
+
+.zoom {
+    margin-top: 10px;
+}
+
+</style>
+
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar bg-primary" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar" style="background-color: #e3f2fd;" data-bs-theme="light">
+  <!-- Navbar content -->
+</nav>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="get_involve.html">Get_involved</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="programmes.html">programmes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="talents.html">Talents</a>
+        </li>
+        <form class="d-flex" onsubmit="return searchPage()">
+  <input 
+    class="form-control me-2" 
+    type="search" 
+    placeholder="Search pages..." 
+    id="searchInput">
+    
+  <button class="btn btn-outline-success" type="submit">
+    Search
+  </button>
+</form>
+    </div>
+  </div>
+</nav> 
+<!-- HERO -->
+<div class="hero">
+    <h1>Our Gallery</h1>
+    <p>Click images to view, zoom, and navigate</p>
+</div>
+
+<!-- GALLERY (5x5 = 25 images) -->
+<div class="gallery-grid">
+
+<!-- 25 IMAGES -->
+<img src="images/estel  14.jpg" onclick="openLightbox(0)">
+<img src="images/estel 10.jpg" onclick="openLightbox(1)">
+<img src="images/estel 11.jpg" onclick="openLightbox(2)">
+<img src="images/estel 12.jpg" onclick="openLightbox(3)">
+<img src="images/estel 13.jpg" onclick="openLightbox(4)">
+
+<img src="images/estel 15.jpg" onclick="openLightbox(5)">
+<img src="images/estel 16.jpg" onclick="openLightbox(6)">
+<img src="images/estel 17.jpg" onclick="openLightbox(7)">
+<img src="images/estel 18.jpg" onclick="openLightbox(8)">
+<img src="images/estel 19.jpg" onclick="openLightbox(9)">
+
+<img src="images/estel 2.jpg" onclick="openLightbox(10)">
+<img src="images/estel 20.jpg" onclick="openLightbox(11)">
+<img src="images/estel 21.jpg" onclick="openLightbox(12)">
+<img src="images/estel 22.jpg" onclick="openLightbox(13)">
+<img src="images/estel 3.jpg" onclick="openLightbox(14)">
+
+<img src="images/estel 4.jpg" onclick="openLightbox(15)">
+<img src="images/estel 5.jpg" onclick="openLightbox(16)">
+<img src="images/estel 7.jpg" onclick="openLightbox(17)">
+<img src="images/estel 6.jpg" onclick="openLightbox(18)">
+<img src="images/estel 8.jpg" onclick="openLightbox(19)">
+
+<img src="images/estel 9.jpg" onclick="openLightbox(20)">
+<img src="images/estel1.jpg" onclick="openLightbox(21)">
+<img src="images/estel 24.jfif" onclick="openLightbox(22)">
+<img src="images/estel 25.jfif" onclick="openLightbox(23)">
+<img src="images/estel 26.jfif" onclick="openLightbox(24)">
+
+<img src="images/estel 27.jfif" onclick="openLightbox(20)">
+<img src="images/estel 29.jfif" onclick="openLightbox(21)">
+<img src="images/WhatsApp Image 2026-04-06 at 11.37.20.jpeg" onclick="openLightbox(22)">
+<img src="images/WhatsApp Image 2026-04-06 at 11.36.37.jpeg" onclick="openLightbox(23)">
+<img src="images/WhatsApp Image 2026-04-06 at 11.36.02.jpeg" onclick="openLightbox(24)">
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+
+    <img id="lightbox-img">
+
+    <!-- CONTROLS -->
+    <div class="controls">
+        <button onclick="prevImg()">⬅ Prev</button>
+        <button onclick="nextImg()">Next ➡</button>
+        <button onclick="closeLightbox()">✖ Close</button>
+    </div>
+
+    <!-- ZOOM -->
+    <div class="zoom">
+        <button onclick="zoomIn()">Zoom +</button>
+        <button onclick="zoomOut()">Zoom -</button>
+    </div>
+
+</div>
+
+<div id="gallery"></div>
+
+<script>
+db.collection("gallery").get().then(snapshot => {
+  snapshot.forEach(doc => {
+    let data = doc.data();
+
+    gallery.innerHTML += `
+      <img src="${data.url}" class="img-fluid">
+    `;
+  });
+});
+</script>
+
+<script>
+
+let images = document.querySelectorAll(".gallery-grid img");
+let currentIndex = 0;
+let scale = 1;
+
+function openLightbox(index) {
+    currentIndex = index;
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = images[index].src;
+    scale = 1;
+    document.getElementById("lightbox-img").style.transform = "scale(1)";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function nextImg() {
+    currentIndex = (currentIndex + 1) % images.length;
+    openLightbox(currentIndex);
+}
+
+function prevImg() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    openLightbox(currentIndex);
+}
+
+function zoomIn() {
+    scale += 0.2;
+    document.getElementById("lightbox-img").style.transform = "scale(" + scale + ")";
+}
+
+function zoomOut() {
+    scale -= 0.2;
+    if (scale < 1) scale = 1;
+    document.getElementById("lightbox-img").style.transform = "scale(" + scale + ")";
+}
+
+</script>
+<script>
+function searchPage() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+
+  if (input.includes("about")) {
+    window.location.href = "about.html";
+  } 
+  else if (input.includes("program") || input.includes("services")) {
+    window.location.href = "programmes.html";
+  } 
+  else if (input.includes("gallery") || input.includes("photos")) {
+    window.location.href = "gallery.html";
+  } 
+  else if (input.includes("contact")) {
+    window.location.href = "contact.html";
+  } 
+  else if (input.includes("home")) {
+    window.location.href = "index.html";
+  } 
+  else if (input.includes("talents")) {
+    window.location.href = "talents.html";
+  } 
+  else {
+    alert("Page not found. Try: About, Programmes, Gallery, Contact");
+  }
+  
+   if (input.includes("donate")) {
+  window.location.href = "getinvolved.html";
+}
+  return false; // stop reload
+}
+</script>
+<footer class="bg-dark text-white text-center p-3">
+  <p>&copy; 2026 Estel Children's Home</p>
+</footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

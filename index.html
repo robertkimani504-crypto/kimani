@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Home-Estel Children`s Centre</title>
+</head>
+
+<body>
+    
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* FIXED ICON CONTAINER */
+.fixed-icons {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* ICON STYLE */
+.fixed-icons a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* INDIVIDUAL COLORS */
+.facebook { background: #1877f2; }
+.instagram { 
+    background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf); 
+}
+.youtube { background: #ff0000; }
+.tiktok { background: #000000; }
+.whatsapp { background: #25d366; }
+
+/* HOVER EFFECT */
+.fixed-icons a:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 768px) {
+    .fixed-icons {
+        flex-direction: row;
+        bottom: 10px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+        background: white;
+        padding: 8px 12px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+}
+</style>
+
+<!-- ICONS -->
+<div class="fixed-icons">
+
+    <!-- Facebook -->
+    <a href="https://facebook.com/estelchildrenshome" target="_blank" class="facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/estelchildrenshome2007" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    
+   
+    <!-- WhatsApp -->
+    <a href="https://wa.me/254722727949" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+ 
+</div>
+<!-- Header Section -->
+<div class="container-fluid header-section">
+    <div class="row align-items-center">
+
+        <!-- Logo (Left) -->
+        <div class="col-3">
+            <img src="images/estel children`s home.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Header (Center) -->
+        <div class="col-6 text-center">
+            <h1 class="main-header">Estel Children`s Centre</h1>
+        </div>
+
+        <!-- Empty space (Right) -->
+        <div class="col-3"></div>
+
+    </div>
+</div>
+
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar bg-primary" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<nav class="navbar" style="background-color: #e3f2fd;" data-bs-theme="light">
+  <!-- Navbar content -->
+</nav>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="get_involve.html">Get_involved</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="programmes.html">programmes</a>
+        </li>
+       
+        
+      <form class="d-flex" onsubmit="return searchPage()">
+  <input 
+    class="form-control me-2" 
+    type="search" 
+    placeholder="Search pages..." 
+    id="searchInput">
+    
+  <button class="btn btn-outline-success" type="submit">
+    Search
+  </button>
+</form>
+    </div>
+  </div>
+</nav> 
+
+<!-- MAIN CONTENT -->
+<div class="container my-5">
+  <div class="card shadow main-card">
+
+    <!-- IMAGE ON TOP -->
+    <img src="images/estel  14.jpg"
+         class="card-img-top main-img"
+         alt="Children">
+     <section class="bg-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">How We Began</h3>
+                <p class="card-text">Estel Children’s Centre was founded in 2007 with a humble beginning of just one child. With time, the family grew from one to two, and today, we are proud to care for 66 children. The centre was established by Esther Wambui Waweru, a devoted Christian whose compassion and strong faith inspired her to reach out and support the less fortunate in society. Located in Kayole, Nairobi, Kenya, Estel Children’s Centre continues to be a place of love, care, and hope, where every child is nurtured and given a chance for a brighter future.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Our Mission</h3>
+                <p class="card-text">At Estel Children’s Centre, our mission is to provide a safe, loving, and supportive home for vulnerable children. We are committed to nurturing their physical, emotional, and spiritual growth by offering quality care, education, and guidance. Through compassion and faith, we strive to empower every child to reach their full potential and become responsible, confident, and hope-filled members of society.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h3 class="card-title">Our Vision</h3>
+                <p class="card-text">To create a nurturing and empowering environment where every child is given the opportunity to grow, learn, and thrive, becoming a confident, responsible, and self-reliant individual who contributes positively to society.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+  </div>
+  </div>
+</div>
+ <script>
+  db.collection("messages").add({
+  name: "John",
+  message: "Hello",
+  time: new Date()
+});
+db.collection("users").add({
+  name: "Robert",
+  joined: new Date()
+});
+db.collection("comments").add({
+  video: "Dance",
+  comment: "Amazing!",
+  time: new Date()
+});
+db.collection("donations").add({
+  name: "Donor",
+  amount: 1000,
+  time: new Date()
+});
+db.collection("donations").add({
+  name: "Donor",
+  amount: 1000,
+  time: new Date()
+});
+db.collection("content").doc("home").set({
+  text: "Welcome to our website"
+});
+ </script>
+ <script>
+function searchPage() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+
+  if (input.includes("about")) {
+    window.location.href= "about.html";
+  } 
+  else if (input.includes("programmes") || input.includes("services")) {
+    window.location.href = "programmes.html";
+  } 
+  else if (input.includes("gallery") || input.includes("photos")) {
+    window.location.href = "gallery.html";
+  } 
+  else if (input.includes("contact")) {
+    window.location.href = "contact.html";
+  } 
+  else if (input.includes("home")) {
+    window.location.href = "index.html";
+  } 
+   else if (input.includes("talents")) {
+    window.location.href = "talents.html";
+  } 
+  else {
+    alert("Page not found. Try: About, Programmes, Gallery, Contact");
+  }
+
+   if (input.includes("donate")) {
+  window.location.href = "getinvolved.html";
+}
+
+  return false; // stop reload
+}
+
+
+</script>
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+  <p>&copy; 2026 Estel Children's Home</p>
+</footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
